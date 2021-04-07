@@ -48,7 +48,10 @@ $ dotnet new sln -n IntroducaoAoEFCore
 # 2 - Criar um projeto do tipo console
 $ dotnet new console -n CursoEFCore -f netcoreapp3.1
 
-# Adicionar o projeto na solução
+# 3 - Adicionar o projeto na solução
 $ dotnet sln IntroducaoAoEFCore.sln add .\CursoEFCore\CursoEFCore.csproj
+
+# 4 - Adicionar o pacote SqlServer
+$ dotnet add .\CursoEFCore\CursoEFCore.csproj package Microsoft.EntityFrameworkCore.SqlServer --version 3.1.5
 
 ```
