@@ -1,13 +1,54 @@
-# Introdução ao Entity Framework Core
-Curso - Introdução ao Entity Framework Core - Disponibilizado por (https://desenvolvedor.io)
+<h1 align="center" >
+  Introdução ao Entity Framework Core
+</h1>
 
-# Comando utilizados 
-1 - Criar a solução do projeto
-    - dotnet new sln -n IntroducaoAoEFCore
+<p align="center">
+  <a href='#core'>EFCore </a>|
+  <a href='#functionalities'>Funcionalidades </a>|
+  <a href='#tecnologies'>Tecnologias </a>|
+  <a href='#layout'>Layout </a>|
+  <a href="#como">Como usar </a>
+  <a href="#uteis">Úteis </a>
+</p>
 
-2 - Criar um projeto do tipo console
-    - dotnet new console -n CursoEFCore -f netcoreapp3.1
+## <p id='core'>💻 EFCore </p>
+Curso - Introdução ao Entity Framework Core - Disponibilizado por (https://desenvolvedor.io).
 
-3 - Adicionar o projeto na solução
-    - dotnet sln IntroducaoAoEFCore.sln add .\CursoEFCore\CursoEFCore.csproj
-    
+## <p id='functionalities'> ⚙ Funcionalidades </p>
+1. 
+
+## <p id='tecnologies'>💻 Tecnologias </p>
+Este projeto foi desenvolvido com as seguintes tecnologias:
+
+-  [.NET](https://docs.microsoft.com/pt-br/dotnet/api/?view=net-5.0)
+-  [.NET Core 3.1](https://docs.microsoft.com/pt-br/dotnet/api/?view=netcore-3.1)
+-  [React Native Gesture Handler](https://kmagiera.github.io/react-native-gesture-handler/)
+
+## <p id='layout'>🎨 Layout ? </p>
+
+## <p id='como'>💻 Como usar </p>
+Para clonar e executar este aplicativo, na linha de comando:
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/diegoluques/IntroducaoAoEFCore.git
+
+# Vá para o repositório
+$ cd IntroducaoAoEFCore
+
+```
+
+## <p id='uteis'>💻 Úteis </p>
+Comandos utilizados durante o curso.
+
+```bash
+# 1 - Criar a solução do projeto
+$ dotnet new sln -n IntroducaoAoEFCore
+
+# 2 - Criar um projeto do tipo console
+$ dotnet new console -n CursoEFCore -f netcoreapp3.1
+
+# Adicionar o projeto na solução
+$ dotnet sln IntroducaoAoEFCore.sln add .\CursoEFCore\CursoEFCore.csproj
+
+```
