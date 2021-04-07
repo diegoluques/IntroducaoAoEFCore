@@ -7,7 +7,7 @@
   <a href='#functionalities'>Funcionalidades </a>|
   <a href='#tecnologies'>Tecnologias </a>|
   <a href='#layout'>Layout </a>|
-  <a href="#como">Como usar </a>
+  <a href="#como">Como usar </a>|
   <a href="#uteis">Úteis </a>
 </p>
 
@@ -22,9 +22,9 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 -  [.NET](https://docs.microsoft.com/pt-br/dotnet/api/?view=net-5.0)
 -  [.NET Core 3.1](https://docs.microsoft.com/pt-br/dotnet/api/?view=netcore-3.1)
--  [React Native Gesture Handler](https://kmagiera.github.io/react-native-gesture-handler/)
 
 ## <p id='layout'>🎨 Layout ? </p>
+
 
 ## <p id='como'>💻 Como usar </p>
 Para clonar e executar este aplicativo, na linha de comando:
