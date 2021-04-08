@@ -22,6 +22,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 -  [.NET](https://docs.microsoft.com/pt-br/dotnet/api/?view=net-5.0)
 -  [.NET Core 3.1](https://docs.microsoft.com/pt-br/dotnet/api/?view=netcore-3.1)
+-  [Sql Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 
 ## <p id='layout'>🎨 Layout ? </p>
 
