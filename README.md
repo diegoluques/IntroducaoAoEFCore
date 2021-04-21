@@ -64,4 +64,7 @@ $ dotnet add .\CursoEFCore\CursoEFCore.csproj package Microsoft.EntityFrameworkC
 # 6 - Adicionar o pacote EF Core Tools
 $ dotnet add .\CursoEFCore\CursoEFCore.csproj package Microsoft.EntityFrameworkCore.Tools --version 3.1.5
 
+# 6 - Criar primeira migração
+$ dotnet ef migrations add PrimeiraMegracao
+
 ```
