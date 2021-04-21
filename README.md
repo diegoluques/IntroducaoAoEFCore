@@ -37,6 +37,9 @@ $ git clone https://github.com/diegoluques/IntroducaoAoEFCore.git
 # Vá para o repositório
 $ cd IntroducaoAoEFCore
 
+# Executa o comando
+$ dotnet run
+
 ```
 
 ## <p id='uteis'>💻 Úteis </p>
