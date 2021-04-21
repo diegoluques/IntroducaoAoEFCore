@@ -61,10 +61,14 @@ $ dotnet tool install --global dotnet-ef --version 3.1.5
 # 6 - Adicionar o pacote EF Core Design
 $ dotnet add .\CursoEFCore\CursoEFCore.csproj package Microsoft.EntityFrameworkCore.Design --version 3.1.5
 
-# 6 - Adicionar o pacote EF Core Tools
+# 7 - Adicionar o pacote EF Core Tools
 $ dotnet add .\CursoEFCore\CursoEFCore.csproj package Microsoft.EntityFrameworkCore.Tools --version 3.1.5
 
-# 6 - Criar primeira migração
+# 8 - Criar primeira migração
 $ dotnet ef migrations add PrimeiraMegracao
+
+# 9 - Criar script para execução no BD primeira migração
+$ dotnet ef migrations script -p .\CursoEFCore\CursoEFCore.csproj -o .\CursoEFCore\PrimeiraMigracao.sql
+
 
 ```
