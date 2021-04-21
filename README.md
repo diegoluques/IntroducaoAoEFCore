@@ -70,11 +70,18 @@ $ dotnet ef migrations add PrimeiraMegracao
 # 9 - Criar script para execução no BD primeira migração
 $ dotnet ef migrations script -p .\CursoEFCore\CursoEFCore.csproj -o .\CursoEFCore\PrimeiraMigracao.sql
 
-# 10 - Executar script para criação do banco e tabelas
+# 10 - Executar script para aplicar a criação/atualizar o banco de dados
 $ dotnet ef database update -p .\CursoEFCore\CursoEFCore.csproj -v
 
 # 11 - Gerando Scripts SQL Idempotentes
 $ dotnet ef migrations script -p .\CursoEFCore\CursoEFCore.csproj -o .\CursoEFCore\Idempotente.sql --idempotent
 
+# 12 - Rollback de migrações
+# - Adicionar uma alteração ao banco de dados.
+$ dotnet ef migrations add AdicionarEmail -p .\CursoEFCore\CursoEFCore.csproj
+# - Aplicar a primeira alteração no banco de dados, removendo o campo adicionado anteriormente
+$ dotnet ef database update PrimeiraMigracao -p .\CursoEFCore\CursoEFCore.csproj -v
+# -Excluir o arquivo de migração email. O comando abaixo remove o último arquivo de migração criado
+$ dotnet ef migrations remove -p .\CursoEFCore\CursoEFCore.csproj
 
 ```
