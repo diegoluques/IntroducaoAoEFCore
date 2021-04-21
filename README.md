@@ -73,4 +73,8 @@ $ dotnet ef migrations script -p .\CursoEFCore\CursoEFCore.csproj -o .\CursoEFCo
 # 10 - Executar script para criação do banco e tabelas
 $ dotnet ef database update -p .\CursoEFCore\CursoEFCore.csproj -v
 
+# 11 - Gerando Scripts SQL Idempotentes
+$ dotnet ef migrations script -p .\CursoEFCore\CursoEFCore.csproj -o .\CursoEFCore\Idempotente.sql --idempotent
+
+
 ```
