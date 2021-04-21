@@ -9,7 +9,7 @@ namespace CursoEFCore.Date
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseSqlServer("Data Source=DEV-LUQUES\\SQL2019;Initial Catalog=DbFinancas;Integrated Security=SSPI;");
+      optionsBuilder.UseSqlServer("Data Source=DEV-LUQUES\\SQL2019;Initial Catalog=BD_CursoEFCore;Integrated Security=SSPI;");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

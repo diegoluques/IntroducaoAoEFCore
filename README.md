@@ -70,5 +70,7 @@ $ dotnet ef migrations add PrimeiraMegracao
 # 9 - Criar script para execução no BD primeira migração
 $ dotnet ef migrations script -p .\CursoEFCore\CursoEFCore.csproj -o .\CursoEFCore\PrimeiraMigracao.sql
 
+# 10 - Executar script para criação do banco e tabelas
+$ dotnet ef database update -p .\CursoEFCore\CursoEFCore.csproj -v
 
 ```
