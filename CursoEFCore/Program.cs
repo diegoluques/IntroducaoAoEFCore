@@ -1,12 +1,22 @@
 ﻿using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace CursoEFCore
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      using var db = new CursoEFCore.Date.ApplicationContext();
+
+      var existe = db.Database.GetPendingMigrations().Any();
+      if (existe)
+      {
+
+      }
+
+      Console.WriteLine("Hello World!");
     }
+  }
 }
