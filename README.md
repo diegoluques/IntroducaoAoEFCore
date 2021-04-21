@@ -55,4 +55,13 @@ $ dotnet sln IntroducaoAoEFCore.sln add .\CursoEFCore\CursoEFCore.csproj
 # 4 - Adicionar o pacote SqlServer
 $ dotnet add .\CursoEFCore\CursoEFCore.csproj package Microsoft.EntityFrameworkCore.SqlServer --version 3.1.5
 
+# 5 - Adicionar o pacote dotnet-ef
+$ dotnet tool install --global dotnet-ef --version 3.1.5
+
+# 6 - Adicionar o pacote EF Core Design
+$ dotnet add .\CursoEFCore\CursoEFCore.csproj package Microsoft.EntityFrameworkCore.Design --version 3.1.5
+
+# 6 - Adicionar o pacote EF Core Tools
+$ dotnet add .\CursoEFCore\CursoEFCore.csproj package Microsoft.EntityFrameworkCore.Tools --version 3.1.5
+
 ```
