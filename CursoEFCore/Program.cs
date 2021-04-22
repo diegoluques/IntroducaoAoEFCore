@@ -24,7 +24,8 @@ namespace CursoEFCore
       //   ConsultarDados();
       //   CadastrarPedido();
       //   ConsultarPedido();
-      AtualizarDados();
+      //   AtualizarDados();
+      RemoverDados();
       Console.ReadLine();
     }
 
@@ -177,6 +178,16 @@ namespace CursoEFCore
 
       //db.Clientes.Update(cliente); //Atualiza todas as propriedades como se tivesse alterações
       //db.SaveChanges();
+    }
+
+    private static void RemoverDados()
+    {
+      using var db = new Date.ApplicationContext();
+
+      var cliente = db.Clientes.Find(2);
+      //   db.Clientes.Remove(cliente);
+      db.Remove(cliente);
+      db.SaveChanges();
     }
   }
 }
