@@ -20,8 +20,8 @@ namespace CursoEFCore
       }
 
       //   InserirDados();
-      InserirDadosEmMassa();
-
+      //   InserirDadosEmMassa();
+      ConsultarDados();
       Console.ReadLine();
     }
 
@@ -105,6 +105,22 @@ namespace CursoEFCore
         TipoProduto = TipoProduto.MercadoriaParaRevenda,
         Ativo = true
       };
+    }
+
+    private static void ConsultarDados()
+    {
+      using var db = new Date.ApplicationContext();
+      //   var consultaPorSintaxe = (from c in db.Clientes where c.Id > 0 select c).ToList();
+      var consultaPorMetodo = db.Clientes
+        .Where(c => c.Id > 0)
+        .OrderBy(c => c.Id)
+        .ToList();
+
+      foreach (var cliente in consultaPorMetodo)
+      {
+        db.Clientes.FirstOrDefault(c => c.Id == c.Id);
+        Console.WriteLine($"Consultando o cliente Id: {cliente.Id}");
+      }
     }
 
   }
