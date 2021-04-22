@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using CursoEFCore.Domain;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +18,13 @@ namespace CursoEFCore.Date
       optionsBuilder
       .UseLoggerFactory(_logger)
       .EnableSensitiveDataLogging()
-      .UseSqlServer("Data Source=DEV-LUQUES\\SQL2019;Initial Catalog=BD_CursoEFCore;Integrated Security=SSPI;");
+      .UseSqlServer("Data Source=DEV-LUQUES\\SQL2019;Initial Catalog=BD_CursoEFCore;Integrated Security=SSPI;",
+      p => p.EnableRetryOnFailure(
+        maxRetryCount: 2,
+        maxRetryDelay:
+          TimeSpan.FromSeconds(5),
+          errorNumbersToAdd: null
+      ));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
