@@ -23,7 +23,8 @@ namespace CursoEFCore
       //   InserirDadosEmMassa();
       //   ConsultarDados();
       //   CadastrarPedido();
-      ConsultarPedido();
+      //   ConsultarPedido();
+      AtualizarDados();
       Console.ReadLine();
     }
 
@@ -165,5 +166,17 @@ namespace CursoEFCore
           .ToList();
     }
 
+    private static void AtualizarDados()
+    {
+      using var db = new Date.ApplicationContext();
+
+      //var cliente = db.Clientes.FirstOrDefault(c => c.Id == 1);
+      var cliente = db.Clientes.Find(1);
+      cliente.Nome = "Diego Luques Atualizado";
+      db.SaveChanges(); //Assim altera no banco de dados somente a propriedade que teve alteração
+
+      //db.Clientes.Update(cliente); //Atualiza todas as propriedades como se tivesse alterações
+      //db.SaveChanges();
+    }
   }
 }
