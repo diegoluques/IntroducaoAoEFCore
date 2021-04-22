@@ -87,4 +87,7 @@ $ dotnet ef database update PrimeiraMigracao -p .\CursoEFCore\CursoEFCore.csproj
 # -Excluir o arquivo de migração email. O comando abaixo remove o último arquivo de migração criado
 $ dotnet ef migrations remove -p .\CursoEFCore\CursoEFCore.csproj
 
+# 13 - Adicionar o pacote logs
+$ dotnet add .\CursoEFCore\CursoEFCore.csproj package Microsoft.Extensions.Logging.Console --version 3.1.5
+
 ```

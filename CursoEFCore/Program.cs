@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using CursoEFCore.Domain;
 using CursoEFCore.ValueObjects;
@@ -18,7 +19,8 @@ namespace CursoEFCore
 
       }
 
-      InserirDados();
+      //   InserirDados();
+      InserirDadosEmMassa();
 
       Console.ReadLine();
     }
@@ -42,6 +44,54 @@ namespace CursoEFCore
 
       var registros = db.SaveChanges();
       Console.WriteLine($"Total de registro adicionado: {registros}");
+    }
+
+    private static void InserirDadosEmMassa()
+    {
+      var produto = new Produto
+      {
+        Descricao = "Produto de teste I",
+        CodigoBarras = "000001",
+        Valor = 125.00M,
+        TipoProduto = TipoProduto.MercadoriaParaRevenda,
+        Ativo = true
+      };
+
+      var cliente = new Cliente
+      {
+        Nome = "Diego Luques 000",
+        Cep = "00000078",
+        Cidade = "Cuiabá",
+        Estado = "MT",
+        Telefone = "65988888888"
+      };
+
+      var listaClientes = new List<Cliente>
+      {
+            new Cliente
+            {
+              Nome = "Diego Luques 001",
+              Cep = "00000078",
+              Cidade = "Cuiabá",
+              Estado = "MT",
+              Telefone = "65988888888"
+            },
+            new Cliente
+            {
+              Nome = "Diego Luques 002",
+              Cep = "00000078",
+              Cidade = "Cuiabá",
+              Estado = "MT",
+              Telefone = "65988888888"
+            }
+      };
+
+      using var db = new Date.ApplicationContext();
+      //   db.AddRange(produto, cliente);
+      db.AddRange(listaClientes);
+
+      var registros = db.SaveChanges();
+      Console.WriteLine($"Total de registros: {registros}");
     }
   }
 }
