@@ -6,16 +6,11 @@
   <a href='#core'>EFCore </a>|
   <a href='#functionalities'>Funcionalidades </a>|
   <a href='#tecnologies'>Tecnologias </a>|
-  <a href='#layout'>Layout </a>|
-  <a href="#como">Como usar </a>|
   <a href="#uteis">Úteis </a>
 </p>
 
 ## <p id='core'>💻 EFCore </p>
 Curso - Introdução ao Entity Framework Core - Disponibilizado por (https://desenvolvedor.io).
-
-## <p id='functionalities'> ⚙ Funcionalidades </p>
-1. 
 
 ## <p id='tecnologies'>💻 Tecnologias </p>
 Este projeto foi desenvolvido com as seguintes tecnologias:
@@ -23,8 +18,6 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 -  [.NET](https://docs.microsoft.com/pt-br/dotnet/api/?view=net-5.0)
 -  [.NET Core 3.1](https://docs.microsoft.com/pt-br/dotnet/api/?view=netcore-3.1)
 -  [Sql Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
-
-## <p id='layout'>🎨 Layout ? </p>
 
 
 ## <p id='como'>💻 Como usar </p>
