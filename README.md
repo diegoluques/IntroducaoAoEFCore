@@ -4,8 +4,8 @@
 
 <p align="center">
   <a href='#core'>EFCore </a>|
-  <a href='#functionalities'>Funcionalidades </a>|
   <a href='#tecnologies'>Tecnologias </a>|
+  <a href="#como">Como usar </a>|
   <a href="#uteis">Úteis </a>
 </p>
 
