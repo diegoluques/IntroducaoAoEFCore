@@ -48,25 +48,21 @@ namespace CursoEFCore
 
     private static void InserirDadosEmMassa()
     {
-      var produto = new Produto
-      {
-        Descricao = "Produto de teste I",
-        CodigoBarras = "000001",
-        Valor = 125.00M,
-        TipoProduto = TipoProduto.MercadoriaParaRevenda,
-        Ativo = true
-      };
+      var produto = CriarProduto();
+      var cliente = CriarCliente();
+      List<Cliente> listaClientes = CriarListaDeClientes();
 
-      var cliente = new Cliente
-      {
-        Nome = "Diego Luques 000",
-        Cep = "00000078",
-        Cidade = "Cuiabá",
-        Estado = "MT",
-        Telefone = "65988888888"
-      };
+      using var db = new Date.ApplicationContext();
+      //   db.AddRange(produto, cliente);
+      db.AddRange(listaClientes);
 
-      var listaClientes = new List<Cliente>
+      var registros = db.SaveChanges();
+      Console.WriteLine($"Total de registros: {registros}");
+    }
+
+    private static List<Cliente> CriarListaDeClientes()
+    {
+      return new List<Cliente>
       {
             new Cliente
             {
@@ -85,13 +81,31 @@ namespace CursoEFCore
               Telefone = "65988888888"
             }
       };
-
-      using var db = new Date.ApplicationContext();
-      //   db.AddRange(produto, cliente);
-      db.AddRange(listaClientes);
-
-      var registros = db.SaveChanges();
-      Console.WriteLine($"Total de registros: {registros}");
     }
+
+    private static Cliente CriarCliente()
+    {
+      return new Cliente
+      {
+        Nome = "Diego Luques 000",
+        Cep = "00000078",
+        Cidade = "Cuiabá",
+        Estado = "MT",
+        Telefone = "65988888888"
+      };
+    }
+
+    private static Produto CriarProduto()
+    {
+      return new Produto
+      {
+        Descricao = "Produto de teste I",
+        CodigoBarras = "000001",
+        Valor = 125.00M,
+        TipoProduto = TipoProduto.MercadoriaParaRevenda,
+        Ativo = true
+      };
+    }
+
   }
 }
