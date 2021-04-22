@@ -21,7 +21,9 @@ namespace CursoEFCore
 
       //   InserirDados();
       //   InserirDadosEmMassa();
-      ConsultarDados();
+      //   ConsultarDados();
+      //   CadastrarPedido();
+      ConsultarPedido();
       Console.ReadLine();
     }
 
@@ -121,6 +123,46 @@ namespace CursoEFCore
         db.Clientes.FirstOrDefault(c => c.Id == c.Id);
         Console.WriteLine($"Consultando o cliente Id: {cliente.Id}");
       }
+    }
+
+    private static void CadastrarPedido()
+    {
+      using var db = new Date.ApplicationContext();
+
+      var cliente = db.Clientes.FirstOrDefault();
+      var produto = db.Produtos.FirstOrDefault();
+
+      var pedido = new Pedido
+      {
+        ClienteId = cliente.Id,
+        IniciadoEm = DateTime.Now,
+        FinalizadoEm = DateTime.Now,
+        Observacao = "Pedido de Teste I",
+        Status = StatusPedido.Analise,
+        TipoFrete = TipoFrete.SemFrete,
+        Itens = new List<PedidoItem>{
+              new PedidoItem{
+                ProdutoId = produto.Id,
+                Desconto = 0,
+                Quantidade = 1,
+                Valor = 10,
+              }
+          }
+      };
+
+      db.Pedidos.Add(pedido);
+      db.SaveChanges();
+    }
+
+    private static void ConsultarPedido()
+    {
+      using var db = new Date.ApplicationContext();
+
+      var pedidos = db
+          .Pedidos
+          .Include(p => p.Itens)
+              .ThenInclude(p => p.Produto)
+          .ToList();
     }
 
   }
